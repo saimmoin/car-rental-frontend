@@ -17,6 +17,14 @@ export const AddAccount = () => {
     return Object.values(obj).some((value) => value === "" || value === null || value === undefined);
   }
 
+  function notifyFunc(response) {
+    if (response.data === "More than 3 accounts found!") {
+      notifyError();
+    } else {
+      notify();
+    }
+  }
+
   const notify = () => toast("Account Created Successfully!", { type: "success" });
   const notifyError = () => toast("Error While Adding Account!", { type: "error" });
   const notifyWarning = () => toast("Please Fill All The Fields!", { type: "warning" });
@@ -32,7 +40,7 @@ export const AddAccount = () => {
           params: accountData,
         });
         console.log(response);
-        notify();
+        notifyFunc(response);
         setAccountData({
           userId: "",
           balance: "",
