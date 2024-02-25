@@ -1,0 +1,29 @@
+/* NavBar.css */
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Dancing+Script&display=swap');
+
+nav {
+    background-color: #04ace5;
+    padding: 10px;
+    font-family: 'Dancing Script';
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-family: 'Dancing Script';
+  }
+  
+  li {
+    margin-right: 20px;
+    font-family: 'Dancing Script';
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Dancing Script';
+  }
+  
