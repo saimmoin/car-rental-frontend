@@ -11,23 +11,49 @@ export const AddAccount = () => {
   const [accountData, setAccountData] = useState({
     userId: "",
     balance: "",
+    pin: "",
   });
+
+  const [users, setUsers] = useState([]);
+  console.log(users);
 
   function hasEmptyValues(obj) {
     return Object.values(obj).some((value) => value === "" || value === null || value === undefined);
   }
 
+  const fetchUsers = async () => {
+    try {
+      const response = await axios.get("http://localhost:8080/api/usersForDropdown");
+      setUsers(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  };
+
+  function replaceNameWithId(name) {
+    const foundObject = users.find((obj) => obj.username === name);
+    return foundObject?.id;
+  }
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
   function notifyFunc(response) {
     if (response.data === "More than 3 accounts found!") {
       notifyError();
-    } else {
+    } else if (response.data == "Account created successfully!") {
       notify();
+    } else {
+      notifyPin();
     }
   }
 
   const notify = () => toast("Account Created Successfully!", { type: "success" });
   const notifyError = () => toast("Error While Adding Account!", { type: "error" });
   const notifyWarning = () => toast("Please Fill All The Fields!", { type: "warning" });
+  const notifyPin = () => toast("The pin provided should be having 4 characters!", { type: "warning" });
 
   const addAccount = async () => {
     console.log(accountData);
@@ -44,6 +70,7 @@ export const AddAccount = () => {
         setAccountData({
           userId: "",
           balance: "",
+          pin: "",
         });
       } catch (error) {
         notifyError();
@@ -65,15 +92,21 @@ export const AddAccount = () => {
         <h2>Create Account</h2>
         <div className="form-group">
           <label htmlFor="userId" class="required">
-            User ID
+            User Names
           </label>
-          <input
-            type="text"
-            id="userId"
+          <select
+            id="statusOption"
             name="userId"
-            value={accountData.userId}
+            value={replaceNameWithId(accountData.userId)}
             onChange={handleInputChange}
-          />
+          >
+            <option key={null} value={null}></option>
+            {users.map((g) => (
+              <option key={g.id} value={g.id}>
+                {g.username}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="form-group">
           <label htmlFor="balance" class="required">
@@ -86,6 +119,12 @@ export const AddAccount = () => {
             value={accountData.balance}
             onChange={handleInputChange}
           />
+        </div>
+        <div className="form-group">
+          <label htmlFor="pin" class="required">
+            Pin
+          </label>
+          <input type="text" id="pin" name="pin" value={accountData.pin} onChange={handleInputChange} />
         </div>
         <button className="submitBtn" type="submit" onClick={addAccount}>
           Create Account

@@ -6,6 +6,7 @@
     margin: 0;
     font-size: 100px;
     color: black;
+    font-family: 'Dancing Script', cursive;
 }
 
 
@@ -29,9 +30,12 @@ body {
 } */
 
 body {
-    background-color: #a1e3be;
+    background-color: orange;
+    font-family: 'Great Vibes', cursive;
 }
 
 nav {
-    background-color: #04ace5;
+    background-color: white;
+    font-family: 'Great Vibes', cursive;
+    color: black;
 }

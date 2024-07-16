@@ -13,29 +13,35 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/accounts">Account List</Link>
+          <Link to="/customers">Customers</Link>
         </li>
         <li>
-          <Link to="/loans">Loan List</Link>
+          <Link to="/cars">Cars</Link>
         </li>
         <li>
-          <Link to="/users">User List</Link>
+          <Link to="/branches">Branches</Link>
         </li>
         <li>
-          <Link to="/addUser">Add User</Link>
+          <Link to="/maintenances">Maintenances</Link>
         </li>
         <li>
-          <Link to="/addAccount">Add Account</Link>
+          <Link to="/reservations">Reservations</Link>
         </li>
         <li>
-          <Link to="/addLoan">Add Loan</Link>
-        </li>
-        {/* <li>
-          <Link to="/addQuestion">Add Question</Link>
+          <Link to="/addCar">Add Car</Link>
         </li>
         <li>
-          <Link to="/updateCategory">Update Category</Link>
-        </li> */}
+          <Link to="/addBranch">Add Branch</Link>
+        </li>
+        <li>
+          <Link to="/addReservation">Add Reservation</Link>
+        </li>
+        <li>
+          <Link to="/addMaintenance">Add Maintenance</Link>
+        </li>
+        <li>
+          <Link to="/addCustomer">Add Customer</Link>
+        </li>
       </ul>
     </nav>
   );

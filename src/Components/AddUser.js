@@ -12,9 +12,15 @@ export const AddUser = () => {
     name: "",
     status: "",
     cnic: "",
+    fatherName: "",
+    age: 0,
+    gender: "",
+    profession: "",
+    phoneNumber: "",
   });
 
   const [status] = useState(["Active", "Inactive"]);
+  const [gender] = useState(["Male", "Female", "Rather not say"]);
 
   function hasEmptyValues(obj) {
     return Object.values(obj).some((value) => value === "" || value === null || value === undefined);
@@ -40,6 +46,11 @@ export const AddUser = () => {
           name: "",
           status: "",
           cnic: "",
+          fatherName: "",
+          age: 0,
+          gender: "",
+          profession: "",
+          phoneNumber: "",
         });
       } catch (error) {
         notifyError();
@@ -71,6 +82,67 @@ export const AddUser = () => {
           </label>
           <input type="text" id="cnic" name="cnic" value={userData.cnic} onChange={handleInputChange} />
         </div>
+
+        <div className="form-group">
+          <label htmlFor="fatherName" class="required">
+            Father Name
+          </label>
+          <input
+            type="text"
+            id="fatherName"
+            name="fatherName"
+            value={userData.fatherName}
+            onChange={handleInputChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="age" class="required">
+            Age
+          </label>
+          <input type="number" id="age" name="age" value={userData.age} onChange={handleInputChange} />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="gender" class="required">
+            Gender
+          </label>
+          <select id="statusOption" name="gender" value={userData.gender} onChange={handleInputChange}>
+            <option key={null} value={null}></option>
+            {gender.map((g) => (
+              <option key={g} value={g}>
+                {g}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="profession" class="required">
+            Profession
+          </label>
+          <input
+            type="text"
+            id="profession"
+            name="profession"
+            value={userData.profession}
+            onChange={handleInputChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="phoneNumber" class="required">
+            Phone Number
+          </label>
+          <input
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={userData.phoneNumber}
+            onChange={handleInputChange}
+          />
+        </div>
+
         <div className="form-group">
           <label htmlFor="status" className="required">
             Status

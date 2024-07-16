@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Dancing+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 /* Card styling */
 .card {
     background-color: #ffffff;
@@ -9,7 +9,7 @@
     width: 400px;
     margin: auto;
     margin-top: 50px;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
 }
 
 .form-group {
@@ -30,7 +30,7 @@
     border-radius: 4px;
     font-size: 14px;
     color: #333333;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
 }
 
 .form-group input[type="number"] {
@@ -40,7 +40,25 @@
     border-radius: 4px;
     font-size: 14px;
     color: #333333;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
+}
+
+.form-group textarea {
+    width: 95%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333333;
+    font-family: 'Dancing Script', cursive;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .form-group input[type="text"]:focus {
@@ -66,7 +84,7 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
 }
 
 .submitBtn:hover {
@@ -85,7 +103,7 @@ select {
         border-radius: 4px;
         font-size: 14px;
         color: #333333;
-        font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
 }
 
 select:focus {

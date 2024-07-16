@@ -11,6 +11,8 @@ export const AddLoan = () => {
   const [loanData, setLoanData] = useState({
     userId: "",
     sanctionAmount: "",
+    accountNumber: "",
+    pin: "",
   });
 
   function hasEmptyValues(obj) {
@@ -44,6 +46,8 @@ export const AddLoan = () => {
         setLoanData({
           userId: "",
           sanctionAmount: "",
+          accountNumber: "",
+          pin: "",
         });
       } catch (error) {
         notifyError();
@@ -80,6 +84,24 @@ export const AddLoan = () => {
             value={loanData.sanctionAmount}
             onChange={handleInputChange}
           />
+        </div>
+        <div className="form-group">
+          <label htmlFor="accountNumber" class="required">
+            Account Number
+          </label>
+          <input
+            type="text"
+            id="accountNumber"
+            name="accountNumber"
+            value={loanData.accountNumber}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="pin" class="required">
+            Pin
+          </label>
+          <input type="text" id="pin" name="pin" value={loanData.pin} onChange={handleInputChange} />
         </div>
         <button className="submitBtn" type="submit" onClick={addLoan}>
           Create Loan

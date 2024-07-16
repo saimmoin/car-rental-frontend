@@ -2,28 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Dancing+Script&display=swap');
 
 nav {
-    background-color: #04ace5;
+    background-color: white;
     padding: 10px;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
   }
   
   ul {
     list-style: none;
     padding: 0;
     display: flex;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
   }
   
   li {
     margin-right: 20px;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
     font-size: 20px;
     padding: 10px;
   }
   
   a {
     text-decoration: none;
-    color: white;
-    font-family: 'Dancing Script';
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    display: inline-block;
+  }
+
+  a:hover {
+    border-bottom: 2px solid orange;
   }
   
