@@ -5,7 +5,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import axios from "axios";
-import "./QuestionList.css";
+import "./index.css";
 import { Loading } from "./Loading";
 import "react-toastify/dist/ReactToastify.css";
 

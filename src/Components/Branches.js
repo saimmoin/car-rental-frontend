@@ -5,7 +5,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import axios from "axios";
-import "./QuestionList.css";
+import "./index.css";
 import { Loading } from "./Loading";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -26,15 +26,11 @@ const Branches = () => {
   }, []);
 
   const columnDefs = [
-    { headerName: "Car ID", field: "carId", width: 120 },
-    { headerName: "Branch Name", field: "branchName", width: 130 },
-    { headerName: "Make", field: "make", width: 125 },
-    { headerName: "Model", field: "model", width: 125 },
-    { headerName: "Year", field: "year", width: 125 },
-    { headerName: "Color", field: "color", width: 125 },
-    { headerName: "License Plate", field: "licensePlate", width: 125 },
-    { headerName: "Status", field: "status", width: 125 },
-    { headerName: "Daily Rental Rate", field: "dailyRentalRate", width: 125 },
+    { headerName: "Branch ID", field: "branchId", width: 100 },
+    { headerName: "Branch Name", field: "branchName", width: 200 },
+    { headerName: "Location", field: "location", width: 300 },
+    { headerName: "Phone Number", field: "phoneNumber", width: 250 },
+    { headerName: "Email", field: "email", width: 300 },
   ];
 
   return (

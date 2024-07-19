@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Dancing+Script&display=swap');
 
 nav {
-    background-color: white;
+    background-color: #00B894;
     padding: 10px;
     font-family: 'Dancing Script', cursive;
   }
@@ -23,13 +23,13 @@ nav {
   
   a {
     text-decoration: none;
-    color: black;
+    color: #FFFFFF;
     font-family: 'Dancing Script', cursive;
     font-weight: bolder;
     display: inline-block;
   }
 
   a:hover {
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid #D5DBDB;
   }
   

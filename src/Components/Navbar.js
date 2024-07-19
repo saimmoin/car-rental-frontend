@@ -22,7 +22,7 @@ const Navbar = () => {
           <Link to="/branches">Branches</Link>
         </li>
         <li>
-          <Link to="/maintenances">Maintenances</Link>
+          <Link to="/maintenance">Maintenances</Link>
         </li>
         <li>
           <Link to="/reservations">Reservations</Link>

@@ -6,7 +6,7 @@ import "./Loading.css";
 export const Loading = () => {
   return (
     <div className="loading-container">
-      <h1 className="loading">Please wait will we fetch the questions</h1>
+      <h1 className="loading">Please wait while we fetch the details.</h1>
     </div>
   );
 };

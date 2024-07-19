@@ -10,14 +10,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Branches from "./Components/Branches.js";
 import Cars from "./Components/Cars.js";
-import { AddUser } from "./Components/AddUser.js";
-import { AddAccount } from "./Components/AddAccount.js";
-import { AddLoan } from "./Components/AddLoan.js";
-import { Deposit } from "./Components/Deposit.js";
-import { Withdraw } from "./Components/Withdraw.js";
-import CustomerHelp from "./Components/CustomerHelp.js";
-import { AddCustomerHelp } from "./Components/AddCustomerHelp.js";
-import Cars from "./Components/Cars.js";
+import { AddCar } from "./Components/AddCar.js";
+import Maintenance from "./Components/Maintenance.js";
+import Reservation from "./Components/Reservation.js";
+import { AddBranch } from "./Components/AddBranch.js";
+import { AddReservation } from "./Components/AddReservation.js";
+import { AddMaintenance } from "./Components/AddMaintenance.js";
+import { AddCustomer } from "./Components/AddCustomer.js";
 
 const AppRouter = () => {
   return (
@@ -33,13 +32,13 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/cars" element={<Cars />} />
         <Route path="/branches" element={<Branches />} />
-        <Route path="/addUser" element={<AddUser />} />
-        <Route path="/addAccount" element={<AddAccount />} />
-        <Route path="/addLoan" element={<AddLoan />} />
-        <Route path="/deposit" element={<Deposit />} />
-        <Route path="/withdraw" element={<Withdraw />} />
-        <Route path="/customerHelps" element={<CustomerHelp />} />
-        <Route path="/addCustomerHelp" element={<AddCustomerHelp />} />
+        <Route path="/reservations" element={<Reservation />} />
+        <Route path="/maintenance" element={<Maintenance />} />
+        <Route path="/addCar" element={<AddCar />} />
+        <Route path="/addBranch" element={<AddBranch />} />
+        <Route path="/addReservation" element={<AddReservation />} />
+        <Route path="/addMaintenance" element={<AddMaintenance />} />
+        <Route path="/addCustomer" element={<AddCustomer />} />
       </Routes>
     </Router>
   );
